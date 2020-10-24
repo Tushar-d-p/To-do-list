@@ -1,0 +1,123 @@
+body{
+	background-color: #ffffe5;
+}
+#todo{
+	width: 400px;
+	border-radius: 30px;
+	border: 1px solid #cfd8dc;
+	box-shadow: 0 0 10px #ccc;
+	margin: 50px auto;
+}
+.todo-header{
+	background-color: #3f94d6;
+	border-radius: 30px 30px 0 0 ;
+	height: 80px;
+	color: #fff;
+}
+.todo-header h2{
+	margin: 0;
+	text-align: center;
+	line-height: 80px;
+	font-size: 32px;
+	font-family: Arial;
+}
+.add-block{
+	height: 50px;
+	border-top: 1px solid #cfd8dc;
+	border-bottom: 1px solid #cfd8dc;
+}
+.add-field{
+	float: left;
+	width: 80%; /*the space taken by col-1 an col-2*/
+	height: 50px;
+	margin: 0;
+	padding:  0 15px;
+	box-sizing: border-box;
+	outline: none; /*bcoz outline must not appear when we type in box*/
+	border: 0;
+	font-size: 15px;
+	font-family: Arial;
+
+}
+
+.add-button{
+	width: 20%;
+	height: 50px;
+	outline: none;
+	color: #3f94d6;
+	font-size: 30px;
+	font-weight: bold;
+	border: 0;
+	padding: 0;
+}
+
+/*the ul tag comes with their own margin and padding
+we need to delete it*/
+.tasks{
+	margin: 0;
+	padding: 0;
+}
+
+/*the li tag also has their own style to represent elem that is dot .*/
+.task{
+	list-style: none;
+	height: 50px;
+	border: 1px solid #cfd8dc;
+}
+
+.task:last-child .col-1{
+	border-radius: 0 0 0 30px;
+}
+
+.task:last-child .col-3{
+	border-radius: 0 0 30px 0;
+}
+
+/*if we dont add this then we see square border if we apply above two styles only*/
+.task:last-child{
+	border-radius: 0 0 30px 30px;
+}
+
+.col-1{
+	background-color: #bbdefb;
+	width: 10%; /*how much space it going to take in that list li tag*/
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	float: left;
+}
+
+.col-2{
+	float:left;
+	width: 70%;
+	background-color: #fff;
+	padding-left: 10px;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	font-family: Arial;
+	box-sizing: border-box; /*otherwise col-3 moves down because it does not fit inside task container */
+}
+
+.col-3{
+	width: 20%;
+	height: 100%;
+	float: left;
+	background-color: #bbdefb;
+}
+.col-3:hover{
+	background-color: #90caf9;
+	cursor: pointer; /*a hand cursor comes*/
+}
+
+.task-remove{
+	background-image: url(images/trash.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 30px;
+}
+
+.checked{
+	text-decoration: line-through;
+}
